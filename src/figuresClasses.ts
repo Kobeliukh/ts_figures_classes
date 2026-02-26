@@ -23,7 +23,9 @@ export class Triangle implements Figure {
     const maxSide: number = Math.max(a, b, c);
 
     if (maxSide >= a + b + c - maxSide) {
-      throw new Error('Enter valid sides');
+      throw new Error(
+        `sides ${a}, ${b} and ${c} can not form a triangle, because the longest side is not shorter than the sum of other two`,
+      );
     }
   }
 
